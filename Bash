@@ -1,0 +1,95 @@
+echo Benvingut al joc de lletres random, Amb cuantes lletres vol jugar?
+read lletres
+declare -a t
+t[0]=A
+t[1]=B
+t[2]=C
+t[3]=D
+t[4]=E
+t[5]=F
+t[6]=G
+t[7]=H
+t[8]=I
+t[9]=J
+t[10]=K
+t[11]=L
+t[12]=M
+t[13]=N
+t[14]=O
+t[15]=P
+t[16]=Q
+t[17]=R
+t[18]=S
+t[19]=T
+t[20]=U
+t[21]=V
+t[22]=W
+t[23]=X
+t[24]=Y
+t[25]=Z
+declare -a sequencia
+
+let counter=0
+while [ $counter -lt $lletres ]
+do
+
+let numero=$RANDOM
+let numeronou=${numero/.*}%26
+
+sequencia[$counter]=${t[$numeronou]}
+
+((counter++))
+done
+
+
+echo "${sequencia[@]}"
+
+echo Di la sequencia que creguis
+read ola
+echo $ola
+
+
+
+while :
+do
+echo Di la sequencia que creguis
+read ola
+echo $ola
+
+
+
+
+let taman=${#ola} 
+echo $taman
+
+
+
+
+
+
+
+if [ $ola == 'A' ]
+then
+break
+fi
+
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
