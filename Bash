@@ -1,3 +1,4 @@
+#! bin/bash/
 echo Benvingut al joc de lletres random, Amb cuantes lletres vol jugar?
 read lletres
 declare -a t
